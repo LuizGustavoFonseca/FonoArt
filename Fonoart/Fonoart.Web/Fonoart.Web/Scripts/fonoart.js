@@ -1,0 +1,1 @@
+﻿angular.module("atendimento", ["ngMessages", "ngAnimate", "ui.bootstrap"]);

@@ -1,0 +1,118 @@
+﻿<script src="~/scripts/fonoart.js"></script>
+<script src="~/scripts/controllers/atendimentoCtrl.js"></script>
+<script src="~/scripts/services/atendimentoAPIServices.js"></script>
+<script src="~/scripts/lib/angular-animate.min.js"></script>
+<script src="~/scripts/lib/ui-bootstrap-tpls-1.2.2.min.js"></script>
+
+<div class="container" ng-controller="atendimentoCtrl">    
+    <h1 class="page-header">Atendimento</h1>        
+    <div class="row">
+        <div class="form-group col-md-5">
+            <label for="cliente">Cliente: </label>
+            <input type="text" class="form-control" id="cliente" />
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputDescricao">Convenio: </label>
+            <input type="text" class="form-control" id="cliente" />
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputDescricao">Fonoaudiologa: </label>
+            <select class="form-control">
+                <option value="">Todas</option>
+                <option value="">Ana Carolina</option>
+                <option value="">Ana Paula</option>
+                <option value="">Mikhaila</option>
+                <option value="">Rafaella</option>                
+            </select>
+        </div>        
+    </div>
+    <div class="row">
+        <div class="form-group col-md-4">
+            <label for="inputDescricao">Situação: </label>
+            <select class="form-control">
+                <option value="">Todas</option>
+                <option value="">Ambulatorial</option>
+                <option value="">Internação</option>                
+            </select>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputDescricao">Data Solicitação: </label>
+            <input type="text" class="form-control" id="cliente" />
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputDescricao">Alta Administrativa: </label>
+            <input type="text" class="form-control" id="cliente" />
+        </div>        
+    </div>
+    <div class="row">
+        <div class="col-md-3 pull-right">
+            <p class="pull-right">
+                <button type="button" class="btn btn-primary">Filtrar</button>
+                <button type="button" class="btn btn-default">Novo Atendimento</button>
+            </p>
+        </div>                        
+    </div>
+    <table ng-show="produtos.length > 0" class="table">
+        <tr>
+            <th width="30%">Paciente</th>
+            <th width="15%">Convênio</th>
+            <th width="15%">Fonoaudiologa</th>
+            <th width="10%">Situação</th>
+            <th width="12%">Data Solicitação</th>
+            <th width="12%" >Alta Atendimento</th>
+            <th width="6%" class=""></th>
+        </tr>
+        @*<tr ng-class="{'selecionado negrito': produto.selecionado}" ng-repeat="produto in produtos | filter: criterioDeBuscaDescricao | orderBy:criterioDeOrcednacao:direcaoDaOrdenacao">
+            <td>{{produto.Codigo}}</td>
+            <td>{{produto.Descricao}}</td>
+            <td class="textoDireita">{{produto.Custo | currency}}</td>
+            <td class="textoDireita">{{produto.Preco | currency}}</td>
+            <td class="textoCentralizado">{{produto.Estoque}}</td>
+            <td class="textoDireita"><button type="button" class="btn btn-default btn-sm" ng-click="abrirModalProduto(produto)"><i class="fa fa-pencil-square-o fa-fw"></i></button>  <button type="button" ng-click="apagarProduto(produto)" class="btn btn-default btn-sm"><i class="fa fa-trash-o fa-fw"></i></button></td>
+        </tr>*@
+        <tr>
+            <td>José Maria da Silva</td>
+            <td>Unimed</td>
+            <td>Ana Paula</td>
+            <td>Ambulatorial</td>
+            <td>22/05/2016</td>
+            <td>-</td>
+            <td><button type="button" class="btn btn-default btn-sm" ng-click="abrirModalProduto(produto)"><i class="fa fa-pencil-square-o fa-fw"></i></button></td>
+        </tr>
+        <tr>
+            <td>Maria José da Silva</td>
+            <td>Unimed</td>
+            <td>Ana Paula</td>
+            <td>Internação</td>
+            <td>22/05/2016</td>
+            <td>12/05/2016</td>
+            <td><button type="button" class="btn btn-default btn-sm" ng-click="abrirModalProduto(produto)"><i class="fa fa-pencil-square-o fa-fw"></i></button></td>
+        </tr>
+    </table>
+    <hr />
+    @*<form name="contatoForm">
+            <input class="form-control" type="text" name="nome" ng-model="contato.nome" placeholder="Nome" ng-required="true" ng-minlength="10">
+            <input class="form-control" type="text" name="telefone" ng-model="contato.telefone" placeholder="Telefone" ng-required="true" ng-pattern="/^\d{4,5}-\d{4}$/">
+            <select class="form-control" ng-model="contato.operadora" ng-options="operadora.nome + ' (' + (operadora.preco | currency) + ')' for operadora in operadoras | orderBy: 'nome'" ng-required="true">
+                <option value="">Selecione uma operadora</option>
+            </select>
+            <button class="btn btn-primary btn-block" ng-click="adicionarContato(contato)" ng-disabled="contatoForm.$invalid">Adicionar Contato</button>
+            <button class="btn btn-danger btn-block" ng-click="apagarContatos(contatos)" ng-disabled="!isContatoSelecionado(contatos)">Apagar Contatos</button>
+        </form>
+    <div ng-messages="contatoForm.nome.$error" ng-class="{'alert alert-danger': contatoForm.nome.$error}">
+        <div ng-message="required" ng-show="contatoForm.nome.$dirty">
+            Por favor preencha o campo nome.
+        </div>
+        <div ng-message="minlength">
+            Tamanha mínimo de 10 caracteres
+        </div>
+        <div ng-message="required" ng-show="contatoForm.nome.$dirty">
+            Por favor preencha o campo telefone.
+        </div>
+        <div ng-message="pattern">
+            Formato de telefone incorreto.
+        </div>
+    </div>*@
+</div>
+
+@*@Html.Partial("_ModalProduto")*@
