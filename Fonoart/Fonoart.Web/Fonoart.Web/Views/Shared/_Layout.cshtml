@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Fonoart</title>
     <link rel="stylesheet" type="text/css" href="~/content/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="~/content/css/font-awesome.css" />
-    <link rel="stylesheet" type="text/css" href="~/content/css/fonoart.css" />
-    <script src="~/scripts/lib/angular.min.js"></script>
-    <script src="~/scripts/lib/angular-messages.min.js"></script>
-    <script src="~/scripts/lib/angular-locale_pt-br.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="~/content/css/fonoart.css" />    
+    <script src="~/scripts/lib/jquery-1.12.4.min.js"></script>    
+    <script src="~/scripts/lib/jquery.dataTables.min.js"></script>    
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -53,9 +55,5 @@
     
     @RenderBody()        
     
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
 </body>
 </html>
