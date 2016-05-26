@@ -206,6 +206,9 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\aero%402x.png" />
+    <Content Include="Content\css\aero.css" />
+    <Content Include="Content\css\aero.png" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\dataTables.bootstrap.min.css" />
     <Content Include="Content\css\fonoart.css" />
@@ -218,6 +221,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\atendimento.js" />
+    <Content Include="Scripts\lib\icheck.min.js" />
     <Content Include="Scripts\lib\jquery.dataTables.min.js" />
     <Content Include="Scripts\principal.js" />
     <Content Include="Scripts\lib\jquery-1.12.4.min.js" />
@@ -250,6 +254,7 @@
     <Content Include="Content\fonts\fontawesome-webfont.woff2" />
     <Content Include="Content\fonts\FontAwesome.otf" />
     <None Include="Project_Readme.html" />
+    <Content Include="Views\Atendimento\_Cadastro.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
