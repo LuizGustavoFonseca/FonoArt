@@ -238,7 +238,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Atendimento\Index.cshtml" />
+    <Content Include="Views\Atendimento\Listagem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -254,7 +254,16 @@
     <Content Include="Content\fonts\fontawesome-webfont.woff2" />
     <Content Include="Content\fonts\FontAwesome.otf" />
     <None Include="Project_Readme.html" />
-    <Content Include="Views\Atendimento\_Cadastro.cshtml" />
+    <Content Include="Views\Atendimento\Cadastro.cshtml" />
+    <Content Include="Views\Atendimento\_Cliente.cshtml" />
+    <Content Include="Views\Atendimento\_Ambulatorial.cshtml" />
+    <Content Include="Views\Atendimento\_Internacao.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Fonoart.SDK\Fonoart.SDK.csproj">
+      <Project>{2ff68707-d92c-47e9-9c0e-379eb6552b3b}</Project>
+      <Name>Fonoart.SDK</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

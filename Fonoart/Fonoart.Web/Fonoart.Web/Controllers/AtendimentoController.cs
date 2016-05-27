@@ -10,7 +10,12 @@ namespace Fonoart.Web.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return View("Listagem");
+        }
+
+        public ActionResult CadastroAtendimento(string codigoAtendimento)
+        {
+            return View("Cadastro", codigoAtendimento);
         }
     }
 }

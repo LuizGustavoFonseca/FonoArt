@@ -1,0 +1,16 @@
+C:\Luiz\_Source\Fonoart\Fonoart.Repositorios\obj\Debug\Fonoart.Repositorios.csprojResolveAssemblyReference.cache
+C:\Luiz\_Source\Fonoart\Fonoart.Repositorios\bin\Debug\Repositorios.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Repositorios\bin\Debug\Repositorios.pdb
+C:\Luiz\_Source\Fonoart\Fonoart.Repositorios\bin\Debug\Entidades.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Repositorios\bin\Debug\Fonoart.Util.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Repositorios\bin\Debug\Fronteiras.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Repositorios\bin\Debug\Entidades.pdb
+C:\Luiz\_Source\Fonoart\Fonoart.Repositorios\bin\Debug\Fronteiras.pdb
+C:\Luiz\_Source\Fonoart\Fonoart.Repositorios\bin\Debug\Fonoart.Util.pdb
+C:\Luiz\_Source\Fonoart\Fonoart.Repositorios\obj\Debug\Repositorios.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Repositorios\obj\Debug\Repositorios.pdb
+C:\Luiz\_Source\Fonoart\Fonoart.Repositorios\bin\Debug\MongoDB.Bson.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Repositorios\bin\Debug\MongoDB.Driver.Core.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Repositorios\bin\Debug\MongoDB.Driver.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Repositorios\bin\Debug\MongoDB.Bson.xml
+C:\Luiz\_Source\Fonoart\Fonoart.Repositorios\bin\Debug\MongoDB.Driver.xml

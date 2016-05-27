@@ -1,0 +1,9 @@
+C:\Luiz\_Source\Fonoart\Fonoart.Fronteiras\bin\Debug\Fronteiras.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Fronteiras\bin\Debug\Fronteiras.pdb
+C:\Luiz\_Source\Fonoart\Fonoart.Fronteiras\obj\Debug\Fronteiras.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Fronteiras\obj\Debug\Fronteiras.pdb
+C:\Luiz\_Source\Fonoart\Fonoart.Fronteiras\bin\Debug\Entidades.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Fronteiras\bin\Debug\Fonoart.Util.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Fronteiras\bin\Debug\Entidades.pdb
+C:\Luiz\_Source\Fonoart\Fonoart.Fronteiras\bin\Debug\Fonoart.Util.pdb
+C:\Luiz\_Source\Fonoart\Fonoart.Fronteiras\obj\Debug\Fonoart.Fronteiras.csprojResolveAssemblyReference.cache

@@ -1,0 +1,27 @@
+﻿@model string
+
+<div class="container cadastro">
+    <h1 class="page-header">Novo Atendimento</h1>
+    <div class="col-md-12">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Dados do Paciente</h3>
+            </div>
+            @Html.Partial("_Cliente")
+        </div>
+    </div>
+    <div class="col-md-12 text-center" style="padding-bottom: 10px;">
+        <label class="radio-inline">
+            <input type="radio" class="icheck" id="checkInternacao" name="tipoAtendimento"> Internação
+        </label>
+        <label class="radio-inline">
+            <input type="radio" class="icheck" id="checkAmbulatorial" name="tipoAtendimento"> Ambulatorial
+        </label>
+    </div>
+    @Html.Partial("_Ambulatorial") 
+    @Html.Partial("_Internacao") 
+</div>
+
+
+<script src="~/scripts/principal.js"></script>
+<script src="~/scripts/atendimento.js"></script>
