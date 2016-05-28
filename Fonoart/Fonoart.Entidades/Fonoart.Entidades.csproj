@@ -44,6 +44,7 @@
     <Compile Include="ChaveEntidadeGuid.cs" />
     <Compile Include="ChaveEntidadeNumerica.cs" />
     <Compile Include="ChaveEntidadeString.cs" />
+    <Compile Include="Fonoaudiologa.cs" />
     <Compile Include="IChaveEntidade.cs" />
     <Compile Include="IEntidade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

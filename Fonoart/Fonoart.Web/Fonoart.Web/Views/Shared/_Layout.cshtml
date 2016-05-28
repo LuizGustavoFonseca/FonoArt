@@ -13,8 +13,11 @@
     <script src="~/scripts/lib/jquery-1.12.4.min.js"></script>    
     <script src="~/scripts/lib/jquery.dataTables.min.js"></script>    
     <script src="~/scripts/lib/icheck.min.js"></script>    
-    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="~/scripts/lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/2.13.0/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>    
     <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <script src="~/scripts/principal.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -30,8 +33,8 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Atendimento</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li class="active"><a href="@Url.Action("Index", "Atendimento")">Atendimento</a></li>
+                    <li><a  href="@Url.Action("Index", "CadastroFonoaudiologa")" >Fonoaudiólogas</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -55,7 +58,8 @@
         </div>
     </nav>
     
-    @RenderBody()        
-    
+    @RenderBody()    
+        
+    @Html.Partial("_ModalConfirmacao")
 </body>
 </html>
