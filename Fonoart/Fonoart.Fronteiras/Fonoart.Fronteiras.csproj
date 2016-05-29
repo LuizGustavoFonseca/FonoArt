@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dtos\FonoaudiologaDTO.cs" />
+    <Compile Include="Executores\ListarFonoaudiologasResultado.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -62,6 +63,10 @@
     <ProjectReference Include="..\Fonoart.Entidades\Fonoart.Entidades.csproj">
       <Project>{d73ceeaf-61e7-43f3-a1ee-f4ae66cea4af}</Project>
       <Name>Fonoart.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fonoart.SDK.Fronteiras\Fonoart.SDK.Fronteiras.csproj">
+      <Project>{DB481FD9-BCE0-415C-BCE3-C110DFC21095}</Project>
+      <Name>Fonoart.SDK.Fronteiras</Name>
     </ProjectReference>
     <ProjectReference Include="..\Fonoart.Web\Fonoart.Util\Fonoart.Util.csproj">
       <Project>{0b37c90f-c270-42e1-b711-5a69ed8a6236}</Project>

@@ -31,3 +31,5 @@ C:\Luiz\_Source\Fonoart\Fonoart.Mapeamentos\bin\Debug\MongoDB.Driver.Core.dll
 C:\Luiz\_Source\Fonoart\Fonoart.Mapeamentos\bin\Debug\MongoDB.Bson.dll
 C:\Luiz\_Source\Fonoart\Fonoart.Mapeamentos\bin\Debug\MongoDB.Driver.xml
 C:\Luiz\_Source\Fonoart\Fonoart.Mapeamentos\bin\Debug\MongoDB.Bson.xml
+C:\Luiz\_Source\Fonoart\Fonoart.Mapeamentos\bin\Debug\AutoMapper.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Mapeamentos\bin\Debug\AutoMapper.xml

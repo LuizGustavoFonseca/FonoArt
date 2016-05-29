@@ -5,17 +5,19 @@ $(function () {
     if ($('.listagem') && $('.listagem').length > 0) {
         $('#tabelaFonos').DataTable({
             "columns": [
-                { "sWidth": "26%" },
-                { "sWidth": "14%", },
-                { "sWidth": "14%", },
+                { "sWidth": "12%" },
                 { "sWidth": "10%", },
-                { "sWidth": "12%", },
-                { "sWidth": "18%", },
+                { "sWidth": "26%", },
+                { "sWidth": "11%", },
+                { "sWidth": "26%", },
+                { "sWidth": "9%", },
                 { "sWidth": "6%", "bSortable": false }
             ],
             "filter": false,
             "lengthChange": false
         });
+
+        Fonoart.Fonoaudiologas.preencherGrid();
     }
     else {
         $("#cpfFono").mask("999.999.999-99");
@@ -35,9 +37,20 @@ $(function () {
 
 Fonoart.Fonoaudiologas = {
     preencherGrid: function () {
-        var action = $('#listagem').data('url-listar');
+        var action = $('.listagem').data('url-listar');
         Fonoart.Principal.chamadaAjax(action, null, function (dados) {
-            
+            $('#tabelaFonos').DataTable().fnClearTable();
+            $.each(dados.Fonoaudiologas, function (indice, fono) {
+                $('.tabelaAudiencias').DataTable().fnAddData([
+                    fono.Cpf,
+                    fono.Crfa,
+                    fono.Nome,
+                    fono.DataNascimento,
+                    fono.Endereco,
+                    fono.Telefone,
+                    '<button class="btn btn-info"> Editar</button>'
+                ]);
+            });
         });
     },
     salvarFono: function () {

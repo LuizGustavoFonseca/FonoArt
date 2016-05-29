@@ -272,3 +272,7 @@ C:\Luiz\_Source\Fonoart\Fonoart.Web\Fonoart.Web\bin\Repositorios.pdb
 C:\Luiz\_Source\Fonoart\Fonoart.Web\Fonoart.Web\bin\Entidades.pdb
 C:\Luiz\_Source\Fonoart\Fonoart.Web\Fonoart.Web\bin\MongoDB.Driver.xml
 C:\Luiz\_Source\Fonoart\Fonoart.Web\Fonoart.Web\bin\MongoDB.Bson.xml
+C:\Luiz\_Source\Fonoart\Fonoart.Web\Fonoart.Web\bin\Fonoart.Util.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Web\Fonoart.Web\bin\AutoMapper.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Web\Fonoart.Web\bin\Fonoart.Util.pdb
+C:\Luiz\_Source\Fonoart\Fonoart.Web\Fonoart.Web\bin\AutoMapper.xml

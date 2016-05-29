@@ -17,10 +17,11 @@ namespace AL.NucleoPoliticasComerciais.Mapeamentos
             #region Mapeamento de Executores
             
             listaMapeamentos.Add(new Mapeamento(typeof(IExecutorSemResultado<SalvarFonoaudiologaRequisicao>), typeof(SalvarFonoaudiologaExecutor)));
+            listaMapeamentos.Add(new Mapeamento(typeof(IExecutorSemRequisicao<ListarFonoaudiologasResultado>), typeof(ListarFonoaudiologasExecutor)));
             #endregion
 
             #region Mapeamento de Repositorios
-            
+
             listaMapeamentos.Add(new Mapeamento(typeof(IFonoaudiologaRepositorio), typeof(FonoaudiologaRepositorio)));
             
             #endregion

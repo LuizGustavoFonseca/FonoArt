@@ -22,3 +22,5 @@ C:\Luiz\_Source\Fonoart\Fonoart.Executores\bin\Debug\Microsoft.Practices.Unity.x
 C:\Luiz\_Source\Fonoart\Fonoart.Executores\bin\Debug\Fonoart.SDK.AcessoDados.pdb
 C:\Luiz\_Source\Fonoart\Fonoart.Executores\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 C:\Luiz\_Source\Fonoart\Fonoart.Executores\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Luiz\_Source\Fonoart\Fonoart.Executores\bin\Debug\AutoMapper.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Executores\bin\Debug\AutoMapper.xml

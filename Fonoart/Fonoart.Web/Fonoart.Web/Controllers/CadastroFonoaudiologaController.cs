@@ -25,7 +25,9 @@ namespace Fonoart.Web.Controllers
 
         public JsonResult ListarFonos()
         {
-            return Json(new { });
+            var resultado = ResolvedorDeDependencias.Instance().ObterInstanciaDe<IExecutorSemRequisicao<ListarFonoaudiologasResultado>>().Executar();
+
+            return Json(new { Fonoaudiologas = resultado.Fonoaudiologas });
         }
 
         public JsonResult SalvarFonoaudiologa([JsonBinder]FonoaudiologaDTO fonoaudiologa)

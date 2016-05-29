@@ -5,14 +5,12 @@ using Repositorios.Entidades;
 using MongoDB.Driver;
 using System.Collections.Generic;
 using System.Collections;
+using Entidades;
 
 namespace Repositorios
 {
     public class FonoaudiologaRepositorio : RepositorioBase<RFonoaudiologa>, IFonoaudiologaRepositorio
     {
-        #region Consultas
-        #endregion
-
         #region Construtor Base
         public FonoaudiologaRepositorio() : base("fono") { }
         #endregion
@@ -33,6 +31,12 @@ namespace Repositorios
         {
             var entidade = new RFonoaudiologa() { Cpf = cpf, Crfa = crfa, DataNascimento = dataNascimento, Endereco = endereco, Nome = nome, Telefone = telefone };
             Inserir(entidade);            
+        }
+
+        public IEnumerable<Fonoaudiologa> Listar()
+        {
+            var filtro = Builders<RFonoaudiologa>.Filter.Empty;
+            return Listar(filtro);
         }
         #endregion
     }
