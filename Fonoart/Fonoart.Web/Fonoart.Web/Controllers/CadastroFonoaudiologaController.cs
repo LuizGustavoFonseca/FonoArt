@@ -1,4 +1,5 @@
-﻿using Fonoart.SDK.Fronteira;
+﻿using AL.NucleoPoliticasComerciais.WebUI.Util.Atributo;
+using Fonoart.SDK.Fronteira;
 using Fonoart.SDK.InversaoControle;
 using Fronteiras.Dtos;
 using Fronteiras.Executores;
@@ -27,7 +28,7 @@ namespace Fonoart.Web.Controllers
             return Json(new { });
         }
 
-        public JsonResult SalvarFonoaudiologa(FonoaudiologaDTO fonoaudiologa)
+        public JsonResult SalvarFonoaudiologa([JsonBinder]FonoaudiologaDTO fonoaudiologa)
         {
             ResolvedorDeDependencias.Instance().ObterInstanciaDe<IExecutorSemResultado<SalvarFonoaudiologaRequisicao>>().
                 Executar(new SalvarFonoaudiologaRequisicao() { Fonoaudiologa = fonoaudiologa, NovaFonoaudiologa = fonoaudiologa.NovaFonoaudiologa });

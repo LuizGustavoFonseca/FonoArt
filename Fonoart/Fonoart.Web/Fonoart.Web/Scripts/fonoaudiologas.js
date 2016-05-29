@@ -28,7 +28,7 @@ $(function () {
             locale: Fonoart.Principal.locale(true)
         });
         $('#salvarFonoaudiologa').on('click', function () {
-            Fonoart.Principal.exibirModalDeConfirmacao("Salvar Evento", "Deseja salvar alterações da fonoaudióloga?", false, Fonoart.Fonoaudiologas.salvarFono());
+            Fonoart.Principal.exibirModalDeConfirmacao("Salvar Evento", "Deseja salvar alterações da fonoaudióloga?", false, function () { Fonoart.Fonoaudiologas.salvarFono() });
         });
     }
 });
@@ -41,17 +41,20 @@ Fonoart.Fonoaudiologas = {
         });
     },
     salvarFono: function () {
-        var fono = {
+        var dataArray = $('#dataNascFono').val().split('/');
+        var dataNascimento = new Date(parseInt(dataArray[2]), parseInt(dataArray[1] - 1), parseInt(dataArray[0]));
+
+        var fonoaudiologa = {
             Cpf: $('#cpfFono').val(),
             Crfa: $('#crfaFono').val(),
             Nome: $('#nomeFono').val(),
-            DataNascimento: $('#dataNascFono').val(),
+            DataNascimento: '\/Date(' + (dataNascimento.getTime() - dataNascimento.getTimezoneOffset() * 60 * 1000) + ')\/',
             Endereco: $('#enderecoFono').val(),
             Telefone: $('#telefoneFono').val(),
             NovaFonoaudiologa: true
         };
         var action = $('#salvarFonoaudiologa').data('url-salvar');
-        Fonoart.Principal.chamadaAjax(action, JSON.stringify({fono}), function (dados) {
+        Fonoart.Principal.chamadaAjax(action, JSON.stringify(fonoaudiologa), function (dados) {
             alert('Sucesso');
         });
     }
