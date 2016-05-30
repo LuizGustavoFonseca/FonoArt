@@ -1,4 +1,5 @@
 ﻿using AL.NucleoPoliticasComerciais.Entidades;
+using MongoDB.Bson;
 using System;
 
 namespace Entidades
@@ -6,6 +7,7 @@ namespace Entidades
     public abstract class Fonoaudiologa : IEntidade
     {
         #region Campos
+        public virtual ObjectId _id { get; set; }
         public virtual string Cpf { get; set; }
         public virtual string Crfa { get; set; }
         public virtual string Nome { get; set; }

@@ -12,5 +12,6 @@ namespace Fronteiras.Repositorios
         void Criar(string cpf, string crfa, DateTime dataNascimento, string endereco, string nome, string telefone);
         void Atualizar(string cpf, string crfa, DateTime dataNascimento, string endereco, string nome, string telefone);
         IEnumerable<Fonoaudiologa> Listar();
+        Fonoaudiologa Obter(string cpf);
     }
 }

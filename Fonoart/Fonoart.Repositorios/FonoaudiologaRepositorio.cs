@@ -38,6 +38,12 @@ namespace Repositorios
             var filtro = Builders<RFonoaudiologa>.Filter.Empty;
             return Listar(filtro);
         }
+
+        public Fonoaudiologa Obter(string cpf)
+        {
+            var filtro = Builders<RFonoaudiologa>.Filter.Eq("Cpf", cpf);
+            return Obter(filtro);
+        }
         #endregion
     }
 }

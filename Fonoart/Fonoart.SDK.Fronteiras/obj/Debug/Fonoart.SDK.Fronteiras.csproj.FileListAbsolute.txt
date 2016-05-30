@@ -2,4 +2,3 @@ C:\Luiz\_Source\Fonoart\Fonoart.SDK.Fronteiras\bin\Debug\Fonoart.SDK.Fronteiras.
 C:\Luiz\_Source\Fonoart\Fonoart.SDK.Fronteiras\bin\Debug\Fonoart.SDK.Fronteiras.pdb
 C:\Luiz\_Source\Fonoart\Fonoart.SDK.Fronteiras\obj\Debug\Fonoart.SDK.Fronteiras.dll
 C:\Luiz\_Source\Fonoart\Fonoart.SDK.Fronteiras\obj\Debug\Fonoart.SDK.Fronteiras.pdb
-C:\Luiz\_Source\Fonoart\Fonoart.SDK.Fronteiras\obj\Debug\Fonoart.SDK.Fronteiras.csprojResolveAssemblyReference.cache

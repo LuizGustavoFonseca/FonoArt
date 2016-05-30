@@ -18,6 +18,7 @@ namespace AL.NucleoPoliticasComerciais.Mapeamentos
             
             listaMapeamentos.Add(new Mapeamento(typeof(IExecutorSemResultado<SalvarFonoaudiologaRequisicao>), typeof(SalvarFonoaudiologaExecutor)));
             listaMapeamentos.Add(new Mapeamento(typeof(IExecutorSemRequisicao<ListarFonoaudiologasResultado>), typeof(ListarFonoaudiologasExecutor)));
+            listaMapeamentos.Add(new Mapeamento(typeof(IExecutor<ObterFonoaudiologaRequisicao, ObterFonoaudiologaResultado>), typeof(ObterFonoaudiologaExecutor)));
             #endregion
 
             #region Mapeamento de Repositorios

@@ -6,11 +6,10 @@ $(function () {
         $('#tabelaFonos').DataTable({
             "columns": [
                 { "sWidth": "12%" },
-                { "sWidth": "10%", },
-                { "sWidth": "26%", },
-                { "sWidth": "11%", },
-                { "sWidth": "26%", },
-                { "sWidth": "9%", },
+                { "sWidth": "12%", },
+                { "sWidth": "36%", },
+                { "sWidth": "17%", },                
+                { "sWidth": "17%", },
                 { "sWidth": "6%", "bSortable": false }
             ],
             "filter": false,
@@ -32,6 +31,10 @@ $(function () {
         $('#salvarFonoaudiologa').on('click', function () {
             Fonoart.Principal.exibirModalDeConfirmacao("Salvar Evento", "Deseja salvar alterações da fonoaudióloga?", false, function () { Fonoart.Fonoaudiologas.salvarFono() });
         });
+
+        if ($('.cadastro').data('cpf-fono')) {
+            Fonoart.Fonoaudiologas.preencherCamposEdicao();
+        }
     }
 });
 
@@ -39,18 +42,29 @@ Fonoart.Fonoaudiologas = {
     preencherGrid: function () {
         var action = $('.listagem').data('url-listar');
         Fonoart.Principal.chamadaAjax(action, null, function (dados) {
-            $('#tabelaFonos').DataTable().fnClearTable();
+            $('#tabelaFonos').DataTable().clear().draw();
             $.each(dados.Fonoaudiologas, function (indice, fono) {
-                $('.tabelaAudiencias').DataTable().fnAddData([
+                $('#tabelaFonos').DataTable().row.add([
                     fono.Cpf,
                     fono.Crfa,
                     fono.Nome,
-                    fono.DataNascimento,
-                    fono.Endereco,
+                    fono.DataNascimentoFormatada,                    
                     fono.Telefone,
-                    '<button class="btn btn-info"> Editar</button>'
-                ]);
+                    '<a class="btn btn-info" href="' + $('.listagem').data('url-cadastro') + '?cpf=' + fono.Cpf + '"><i class="fa fa-edit"></i></button>'
+                ]).draw();
             });
+        });
+    },
+    preencherCamposEdicao: function () {
+        var action = $('.cadastro').data('url-obter-fonoaudiologa');
+        Fonoart.Principal.chamadaAjax(action, { cpf: $('.cadastro').data('cpf-fono') }, function (dados) {
+            $('#cpfFono').attr('disabled', 'disabled');
+            $('#cpfFono').val(dados.Fonoaudiologa.Cpf);
+            $('#crfaFono').val(dados.Fonoaudiologa.Crfa);
+            $('#nomeFono').val(dados.Fonoaudiologa.Nome);
+            $('#dataNascFono').data('daterangepicker').setStartDate(dados.Fonoaudiologa.DataNascimento);
+            $('#enderecoFono').val(dados.Fonoaudiologa.Endereco);
+            $('#telefoneFono').val(dados.Fonoaudiologa.Telefone);
         });
     },
     salvarFono: function () {

@@ -24,7 +24,16 @@ namespace Executores
             return new ListarFonoaudiologasResultado()
             {
                 Estado = EstadoResultado.OK,
-                Fonoaudiologas = fonoaudiologaRepositorio.Listar().TransformarEmListaDe<FonoaudiologaDTO>()
+                Fonoaudiologas =  fonoaudiologaRepositorio.Listar().Select(item => new FonoaudiologaDTO()
+                {
+                    Cpf = item.Cpf,
+                    Crfa= item.Crfa,
+                    DataNascimento = item.DataNascimento,
+                    Endereco = item.Endereco,
+                    Nome = item.Nome,
+                    Telefone = item.Telefone,
+                    _id = item._id
+                })
             };
         }
     }

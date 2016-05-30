@@ -1,6 +1,7 @@
 ﻿using AL.NucleoPoliticasComerciais.WebUI.Util.Atributo;
 using Fonoart.SDK.Fronteira;
 using Fonoart.SDK.InversaoControle;
+using Fonoart.Web.Models;
 using Fronteiras.Dtos;
 using Fronteiras.Executores;
 using System;
@@ -18,9 +19,9 @@ namespace Fonoart.Web.Controllers
             return View("Listagem");
         }
 
-        public ActionResult Cadastro()
+        public ActionResult Cadastro(string cpf)
         {
-            return View("Cadastro");
+            return View("Cadastro", new CadastroFonoaudiologaModel() { Cpf = cpf });
         }
 
         public JsonResult ListarFonos()
@@ -28,6 +29,14 @@ namespace Fonoart.Web.Controllers
             var resultado = ResolvedorDeDependencias.Instance().ObterInstanciaDe<IExecutorSemRequisicao<ListarFonoaudiologasResultado>>().Executar();
 
             return Json(new { Fonoaudiologas = resultado.Fonoaudiologas });
+        }
+
+        public JsonResult ObterFono(string cpf)
+        {
+            var resultado = ResolvedorDeDependencias.Instance().ObterInstanciaDe<IExecutor<ObterFonoaudiologaRequisicao, ObterFonoaudiologaResultado>>().
+                Executar(new ObterFonoaudiologaRequisicao() { Cpf = cpf });
+
+            return Json(new { Fonoaudiologa = resultado.Fonoaudiologa });
         }
 
         public JsonResult SalvarFonoaudiologa([JsonBinder]FonoaudiologaDTO fonoaudiologa)

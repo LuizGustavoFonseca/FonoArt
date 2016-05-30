@@ -1,9 +1,10 @@
+C:\Luiz\_Source\Fonoart\Fonoart.Entidades\obj\Debug\Fonoart.Entidades.csprojResolveAssemblyReference.cache
 C:\Luiz\_Source\Fonoart\Fonoart.Entidades\bin\Debug\Entidades.dll
 C:\Luiz\_Source\Fonoart\Fonoart.Entidades\bin\Debug\Entidades.pdb
+C:\Luiz\_Source\Fonoart\Fonoart.Entidades\bin\Debug\Fonoart.Util.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Entidades\bin\Debug\MongoDB.Bson.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Entidades\bin\Debug\AutoMapper.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Entidades\bin\Debug\Fonoart.Util.pdb
+C:\Luiz\_Source\Fonoart\Fonoart.Entidades\bin\Debug\AutoMapper.xml
 C:\Luiz\_Source\Fonoart\Fonoart.Entidades\obj\Debug\Entidades.dll
 C:\Luiz\_Source\Fonoart\Fonoart.Entidades\obj\Debug\Entidades.pdb
-C:\Luiz\_Source\Fonoart\Fonoart.Entidades\bin\Debug\Fonoart.Util.dll
-C:\Luiz\_Source\Fonoart\Fonoart.Entidades\bin\Debug\Fonoart.Util.pdb
-C:\Luiz\_Source\Fonoart\Fonoart.Entidades\obj\Debug\Fonoart.Entidades.csprojResolveAssemblyReference.cache
-C:\Luiz\_Source\Fonoart\Fonoart.Entidades\bin\Debug\AutoMapper.dll
-C:\Luiz\_Source\Fonoart\Fonoart.Entidades\bin\Debug\AutoMapper.xml
