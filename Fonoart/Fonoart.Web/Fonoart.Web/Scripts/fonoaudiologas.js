@@ -32,6 +32,10 @@ $(function () {
             Fonoart.Principal.exibirModalDeConfirmacao("Salvar Evento", "Deseja salvar alterações da fonoaudióloga?", false, function () { Fonoart.Fonoaudiologas.salvarFono() });
         });
 
+        $('#cancelarAlteracoes').on('click', function () {
+            Fonoart.Principal.exibirModalDeConfirmacao("Cancelar Alterações", "Ao cancelar todas as alterações serão perdidas. Confirma?", false, function () { Fonoart.Fonoaudiologas.cancelarFono() });
+        });
+
         if ($('.cadastro').data('cpf-fono')) {
             Fonoart.Fonoaudiologas.preencherCamposEdicao();
         }
@@ -39,6 +43,7 @@ $(function () {
 });
 
 Fonoart.Fonoaudiologas = {
+    novaFono: true,
     preencherGrid: function () {
         var action = $('.listagem').data('url-listar');
         Fonoart.Principal.chamadaAjax(action, null, function (dados) {
@@ -58,6 +63,7 @@ Fonoart.Fonoaudiologas = {
     preencherCamposEdicao: function () {
         var action = $('.cadastro').data('url-obter-fonoaudiologa');
         Fonoart.Principal.chamadaAjax(action, { cpf: $('.cadastro').data('cpf-fono') }, function (dados) {
+            $('.titulo').text($('.titulo').text() + dados.Fonoaudiologa.Nome);
             $('#cpfFono').attr('disabled', 'disabled');
             $('#cpfFono').val(dados.Fonoaudiologa.Cpf);
             $('#crfaFono').val(dados.Fonoaudiologa.Crfa);
@@ -65,6 +71,7 @@ Fonoart.Fonoaudiologas = {
             $('#dataNascFono').data('daterangepicker').setStartDate(dados.Fonoaudiologa.DataNascimento);
             $('#enderecoFono').val(dados.Fonoaudiologa.Endereco);
             $('#telefoneFono').val(dados.Fonoaudiologa.Telefone);
+            Fonoart.Fonoaudiologas.novaFono = false;
         });
     },
     salvarFono: function () {
@@ -78,11 +85,16 @@ Fonoart.Fonoaudiologas = {
             DataNascimento: '\/Date(' + (dataNascimento.getTime() - dataNascimento.getTimezoneOffset() * 60 * 1000) + ')\/',
             Endereco: $('#enderecoFono').val(),
             Telefone: $('#telefoneFono').val(),
-            NovaFonoaudiologa: true
+            NovaFonoaudiologa: Fonoart.Fonoaudiologas.novaFono
         };
         var action = $('#salvarFonoaudiologa').data('url-salvar');
         Fonoart.Principal.chamadaAjax(action, JSON.stringify(fonoaudiologa), function (dados) {
-            alert('Sucesso');
+            noty({ text: 'noty - a jquery notification library!', layout: "topCenter" });
+            //window.location.href = $('.cadastro').data('url-listar');
         });
+    },
+    cancelarFono: function () {
+        window.location.href = $('.cadastro').data('url-listar');
     }
+
 };

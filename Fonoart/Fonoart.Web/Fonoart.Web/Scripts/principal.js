@@ -18,17 +18,17 @@ Fonoart.Principal = {
             traditional: true,
             beforeSend: function () {
                 //if (!naoExibirCarregando) {
-                //    if (NPC.Principal.contadorLoading == 0) {
-                //        NPC.Principal.exibirLoading();
+                //    if (Fonoart.Principal.contadorLoading == 0) {
+                //        Fonoart.Principal.exibirLoading();
                 //    }
-                //    NPC.Principal.contadorLoading++;
+                //    Fonoart.Principal.contadorLoading++;
                 //}
             },
             complete: function () {
                 //if (!naoExibirCarregando) {
-                //    NPC.Principal.contadorLoading--;
-                //    if (NPC.Principal.contadorLoading == 0) {
-                //        NPC.Principal.esconderLoading();
+                //    Fonoart.Principal.contadorLoading--;
+                //    if (Fonoart.Principal.contadorLoading == 0) {
+                //        Fonoart.Principal.esconderLoading();
                 //    }
                 //}
             },
@@ -150,5 +150,5 @@ Fonoart.Principal = {
                 element.mask("(99) 9999-9999?9");
             }
         });
-}
+    }
 };
