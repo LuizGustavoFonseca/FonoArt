@@ -1,4 +1,9 @@
-﻿using Fonoart.SDK.InversaoControle;
+﻿using Executores;
+using Fonoart.SDK.Fronteira;
+using Fonoart.SDK.InversaoControle;
+using Fronteiras.Executores;
+using Fronteiras.Repositorios;
+using Repositorios;
 using System.Collections.Generic;
 
 namespace AL.NucleoPoliticasComerciais.Mapeamentos
@@ -11,12 +16,14 @@ namespace AL.NucleoPoliticasComerciais.Mapeamentos
 
             #region Mapeamento de Executores
             
-            //listaMapeamentos.Add(new Mapeamento(typeof(IExecutorSemResultado<AlterarSituacaoPropostaRequisicao>), typeof(AlterarSituacaoPropostaExecutor)));
+            listaMapeamentos.Add(new Mapeamento(typeof(IExecutorSemResultado<SalvarFonoaudiologaRequisicao>), typeof(SalvarFonoaudiologaExecutor)));
+            listaMapeamentos.Add(new Mapeamento(typeof(IExecutorSemRequisicao<ListarFonoaudiologasResultado>), typeof(ListarFonoaudiologasExecutor)));
+            listaMapeamentos.Add(new Mapeamento(typeof(IExecutor<ObterFonoaudiologaRequisicao, ObterFonoaudiologaResultado>), typeof(ObterFonoaudiologaExecutor)));
             #endregion
 
             #region Mapeamento de Repositorios
-            
-            //listaMapeamentos.Add(new Mapeamento(typeof(IPermissaoRepositorio), typeof(PermissaoRepositorio)));
+
+            listaMapeamentos.Add(new Mapeamento(typeof(IFonoaudiologaRepositorio), typeof(FonoaudiologaRepositorio)));
             
             #endregion
 

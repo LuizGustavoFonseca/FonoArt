@@ -80,6 +80,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -192,18 +193,15 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AtendimentoController.cs" />
+    <Compile Include="Controllers\CadastroFonoaudiologaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\CadastroFonoaudiologaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Startup.cs" />
+    <Compile Include="Util\JsonBinderAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\aero%402x.png" />
@@ -221,6 +219,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\atendimento.js" />
+    <Content Include="Scripts\fonoaudiologas.js" />
+    <Content Include="Scripts\lib\bootstrap.min.js" />
     <Content Include="Scripts\lib\icheck.min.js" />
     <Content Include="Scripts\lib\jquery.dataTables.min.js" />
     <Content Include="Scripts\principal.js" />
@@ -258,8 +258,23 @@
     <Content Include="Views\Atendimento\_Cliente.cshtml" />
     <Content Include="Views\Atendimento\_Ambulatorial.cshtml" />
     <Content Include="Views\Atendimento\_Internacao.cshtml" />
+    <Content Include="Views\CadastroFonoaudiologa\Listagem.cshtml" />
+    <Content Include="Views\CadastroFonoaudiologa\Cadastro.cshtml" />
+    <Content Include="Views\Shared\_ModalConfirmacao.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Fonoart.Fronteiras\Fonoart.Fronteiras.csproj">
+      <Project>{B222261A-2BF6-4E91-BB0B-ADA531170D0C}</Project>
+      <Name>Fonoart.Fronteiras</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fonoart.Mapeamentos\Fonoart.Mapeamentos.csproj">
+      <Project>{1CF113A6-B58D-4C6E-AAFC-17327AFD5288}</Project>
+      <Name>Fonoart.Mapeamentos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fonoart.SDK.Fronteiras\Fonoart.SDK.Fronteiras.csproj">
+      <Project>{DB481FD9-BCE0-415C-BCE3-C110DFC21095}</Project>
+      <Name>Fonoart.SDK.Fronteiras</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Fonoart.SDK\Fonoart.SDK.csproj">
       <Project>{2ff68707-d92c-47e9-9c0e-379eb6552b3b}</Project>
       <Name>Fonoart.SDK</Name>

@@ -1,0 +1,58 @@
+﻿@model Fonoart.Web.Models.CadastroFonoaudiologaModel
+
+<div class="container cadastro" data-cpf-fono="@Model.Cpf" data-url-obter-fonoaudiologa="@Url.Action("ObterFono", "CadastroFonoaudiologa")">
+    <div class="page-header">
+        <h3 class="pull-left">@(Model.Cpf == null ? "Nova Fonoaudióloga" : $"Fonoaudióloga {Model.Cpf}")</h3>
+        <div class="pull-right">
+            <button type="button" class="btn btn-primary" id="salvarFonoaudiologa" data-url-salvar="@Url.Action("SalvarFonoaudiologa", "CadastroFonoaudiologa")">Salvar</button>
+            <button type="button" class="btn btn-danger" id="cancelarAlteracoes">Cancelar</button>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>CPF*</label>
+                <input type="text" class="form-control" id="cpfFono" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>CRFa*</label>
+                <input type="text" class="form-control" id="crfaFono" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <div class="form-group">
+                <label>Nome*</label>
+                <input type="text" class="form-control" id="nomeFono" />
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Data de Nascimento</label>
+                <input type="text" class="form-control" id="dataNascFono" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label>Endereço</label>
+                <input type="text" class="form-control" id="enderecoFono" />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Telefone</label>
+                <input type="text" class="form-control" id="telefoneFono" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/scripts/fonoaudiologas.js"></script>
+

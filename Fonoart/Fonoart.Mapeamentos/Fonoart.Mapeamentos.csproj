@@ -62,6 +62,10 @@
       <Project>{93ecc3e8-c425-4830-ab0e-425220ff8819}</Project>
       <Name>Fonoart.Repositorios</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Fonoart.SDK.Fronteiras\Fonoart.SDK.Fronteiras.csproj">
+      <Project>{DB481FD9-BCE0-415C-BCE3-C110DFC21095}</Project>
+      <Name>Fonoart.SDK.Fronteiras</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Fonoart.SDK\Fonoart.SDK.csproj">
       <Project>{2ff68707-d92c-47e9-9c0e-379eb6552b3b}</Project>
       <Name>Fonoart.SDK</Name>
