@@ -38,3 +38,19 @@
   position: relative;
   top: 15px;
 }
+
+.divBloquearTela {
+    background-color: grey;
+    opacity: 0.5;
+    float: left;
+    z-index: 10000;
+    position: absolute !important;
+}
+
+.centralizado {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: darkgreen;
+}

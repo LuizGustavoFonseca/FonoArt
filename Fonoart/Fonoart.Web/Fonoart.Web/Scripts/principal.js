@@ -2,6 +2,8 @@
 
 
 $(function () {
+    Fonoart.Principal.esconderLoading();
+
     $('.icheck').iCheck({
         checkboxClass: 'icheckbox_flat-aero',
         radioClass: 'iradio_flat-aero'
@@ -9,6 +11,7 @@ $(function () {
 });
 
 Fonoart.Principal = {
+    contadorLoading: 0,
     chamadaAjax: function (url, parametros, callbackSucesso, callbackErro, naoExibirCarregando) {
         $.ajax({
             type: "POST",
@@ -17,20 +20,20 @@ Fonoart.Principal = {
             dataType: "json",
             traditional: true,
             beforeSend: function () {
-                //if (!naoExibirCarregando) {
-                //    if (Fonoart.Principal.contadorLoading == 0) {
-                //        Fonoart.Principal.exibirLoading();
-                //    }
-                //    Fonoart.Principal.contadorLoading++;
-                //}
+                if (!naoExibirCarregando) {
+                    if (Fonoart.Principal.contadorLoading == 0) {
+                        Fonoart.Principal.exibirLoading();
+                    }
+                    Fonoart.Principal.contadorLoading++;
+                }
             },
             complete: function () {
-                //if (!naoExibirCarregando) {
-                //    Fonoart.Principal.contadorLoading--;
-                //    if (Fonoart.Principal.contadorLoading == 0) {
-                //        Fonoart.Principal.esconderLoading();
-                //    }
-                //}
+                if (!naoExibirCarregando) {
+                    Fonoart.Principal.contadorLoading--;
+                    if (Fonoart.Principal.contadorLoading == 0) {
+                        Fonoart.Principal.esconderLoading();
+                    }
+                }
             },
             success: function (args) {
                 if (args.expirou) {
@@ -47,7 +50,7 @@ Fonoart.Principal = {
                 }
                 catch (excecao) {
                 }
-                alertaErro(jsonValue.Mensagem);
+                Fonoart.Principal.alertaErro(jsonValue.Mensagem);
                 if (reqObj.state() != 'rejected') {
                     if (callbackErro) {
                         callbackErro(tipoErro, mensagemErro);
@@ -55,6 +58,20 @@ Fonoart.Principal = {
                 }
             }
         });
+    },
+    exibirLoading: function () {
+        var bodyHeight = $('body').height();
+        if ($('.page-container').length > 0) {
+            containerHeight = $('.container').height();
+        }
+        else {
+            containerHeight = $('.container').height();
+        }
+        $(".divBloquearTela").height(bodyHeight > containerHeight ? bodyHeight : containerHeight);
+        $('.divBloquearTela').show();
+    },
+    esconderLoading: function () {
+        $('.divBloquearTela').hide();
     },
     exibirModalDeConfirmacao: function (titulo, texto, corpoHtml, callbackConfirma, callbackCancela) {
         $('#modalConfirmacao').modal('toggle');
@@ -150,5 +167,21 @@ Fonoart.Principal = {
                 element.mask("(99) 9999-9999?9");
             }
         });
+    },
+    alertaErro: function (mensagemDeErro) {
+        noty({
+            text: mensagemDeErro, layout: "topRight", type: 'error', theme: 'defaultTheme', timeout: 5000, animation: {
+                open: { height: 'toggle' }, // jQuery animate function property object
+                close: { height: 'toggle' }, // jQuery animate function property object
+                easing: 'swing', // easing
+                speed: 500 // opening & closing animation speed
+            }
+        });
+    },
+    alertaSucesso: function (mensagem) {
+        noty({ text: mensagem, layout: "topRight", type: 'success', timeout: 5000 });
+    },
+    alertaWarning: function (mensagem) {
+        noty({ text: mensagem, layout: "topRight", type: 'warning', timeout: 5000 });
     }
 };

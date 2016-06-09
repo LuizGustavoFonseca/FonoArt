@@ -12,3 +12,17 @@ C:\Luiz\_Source\Fonoart\Fonoart.Fronteiras\bin\Debug\Fonoart.Util.pdb
 C:\Luiz\_Source\Fonoart\Fonoart.Fronteiras\bin\Debug\AutoMapper.xml
 C:\Luiz\_Source\Fonoart\Fonoart.Fronteiras\obj\Debug\Fronteiras.dll
 C:\Luiz\_Source\Fonoart\Fonoart.Fronteiras\obj\Debug\Fronteiras.pdb
+C:\_Source\FonoArt\Fonoart\Fonoart.Fronteiras\bin\Debug\Fronteiras.dll
+C:\_Source\FonoArt\Fonoart\Fonoart.Fronteiras\bin\Debug\Fronteiras.pdb
+C:\_Source\FonoArt\Fonoart\Fonoart.Fronteiras\bin\Debug\Entidades.dll
+C:\_Source\FonoArt\Fonoart\Fonoart.Fronteiras\bin\Debug\Fonoart.SDK.Fronteiras.dll
+C:\_Source\FonoArt\Fonoart\Fonoart.Fronteiras\bin\Debug\Fonoart.Util.dll
+C:\_Source\FonoArt\Fonoart\Fonoart.Fronteiras\bin\Debug\MongoDB.Bson.dll
+C:\_Source\FonoArt\Fonoart\Fonoart.Fronteiras\bin\Debug\AutoMapper.dll
+C:\_Source\FonoArt\Fonoart\Fonoart.Fronteiras\bin\Debug\Entidades.pdb
+C:\_Source\FonoArt\Fonoart\Fonoart.Fronteiras\bin\Debug\Fonoart.SDK.Fronteiras.pdb
+C:\_Source\FonoArt\Fonoart\Fonoart.Fronteiras\bin\Debug\Fonoart.Util.pdb
+C:\_Source\FonoArt\Fonoart\Fonoart.Fronteiras\bin\Debug\AutoMapper.xml
+C:\_Source\FonoArt\Fonoart\Fonoart.Fronteiras\obj\Debug\Fonoart.Fronteiras.csprojResolveAssemblyReference.cache
+C:\_Source\FonoArt\Fonoart\Fonoart.Fronteiras\obj\Debug\Fronteiras.dll
+C:\_Source\FonoArt\Fonoart\Fonoart.Fronteiras\obj\Debug\Fronteiras.pdb

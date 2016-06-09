@@ -4,3 +4,12 @@ C:\Luiz\_Source\Fonoart\Fonoart.Web\Fonoart.Util\bin\Debug\AutoMapper.dll
 C:\Luiz\_Source\Fonoart\Fonoart.Web\Fonoart.Util\bin\Debug\AutoMapper.xml
 C:\Luiz\_Source\Fonoart\Fonoart.Web\Fonoart.Util\obj\Debug\Fonoart.Util.dll
 C:\Luiz\_Source\Fonoart\Fonoart.Web\Fonoart.Util\obj\Debug\Fonoart.Util.pdb
+C:\_Source\FonoArt\Fonoart\Fonoart.Web\Fonoart.Util\bin\Debug\Fonoart.Util.dll
+C:\_Source\FonoArt\Fonoart\Fonoart.Web\Fonoart.Util\bin\Debug\Fonoart.Util.pdb
+C:\_Source\FonoArt\Fonoart\Fonoart.Web\Fonoart.Util\bin\Debug\AutoMapper.dll
+C:\_Source\FonoArt\Fonoart\Fonoart.Web\Fonoart.Util\bin\Debug\AutoMapper.xml
+C:\_Source\FonoArt\Fonoart\Fonoart.Web\Fonoart.Util\obj\Debug\Fonoart.Util.csprojResolveAssemblyReference.cache
+C:\_Source\FonoArt\Fonoart\Fonoart.Web\Fonoart.Util\obj\Debug\Fonoart.Util.Resource.MensagensErro.resources
+C:\_Source\FonoArt\Fonoart\Fonoart.Web\Fonoart.Util\obj\Debug\Fonoart.Util.csproj.GenerateResource.Cache
+C:\_Source\FonoArt\Fonoart\Fonoart.Web\Fonoart.Util\obj\Debug\Fonoart.Util.dll
+C:\_Source\FonoArt\Fonoart\Fonoart.Web\Fonoart.Util\obj\Debug\Fonoart.Util.pdb
