@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Fonoart.SDK.Fronteira;
+using Fonoart.SDK.InversaoControle;
+using Fonoart.Web.Models;
+using Fronteiras.Executores;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,8 +14,12 @@ namespace Fonoart.Web.Controllers
     {
         public ActionResult Index()
         {
-            return View("Listagem");
-        }
+            AtendimentoModel model = new AtendimentoModel();
+            var resultado = ResolvedorDeDependencias.Instance().ObterInstanciaDe<IExecutorSemRequisicao<ListarFonoaudiologasResultado>>().Executar();
+            model.Fonoaudiologas = resultado.Fonoaudiologas;
+
+            return View("Listagem", model);
+        }        
 
         public ActionResult CadastroAtendimento(string codigoAtendimento)
         {

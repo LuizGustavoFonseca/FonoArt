@@ -302,3 +302,7 @@ C:\_Source\FonoArt\Fonoart\Fonoart.Web\Fonoart.Web\bin\Fonoart.Util.dll
 C:\_Source\FonoArt\Fonoart\Fonoart.Web\Fonoart.Web\bin\AutoMapper.dll
 C:\_Source\FonoArt\Fonoart\Fonoart.Web\Fonoart.Web\bin\Fonoart.Util.pdb
 C:\_Source\FonoArt\Fonoart\Fonoart.Web\Fonoart.Web\bin\AutoMapper.xml
+C:\Luiz\_Source\Fonoart\Fonoart.Web\Fonoart.Web\bin\Fonoart.Util.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Web\Fonoart.Web\bin\AutoMapper.dll
+C:\Luiz\_Source\Fonoart\Fonoart.Web\Fonoart.Web\bin\Fonoart.Util.pdb
+C:\Luiz\_Source\Fonoart\Fonoart.Web\Fonoart.Web\bin\AutoMapper.xml
