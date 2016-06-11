@@ -3,3 +3,37 @@
 ################################################################################
 
 *.cache
+
+
+accepted
+In GitExtensions the default .gitignore is this. It can be a bit shorted by removing most individual file extensions and only exclude the directories they are in.
+
+*.obj
+*.exe
+*.exp
+*.pdb
+*.dll
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.zip
+[Dd]ebug*/
+*.lib
+*.sbr
+Thumbs.db
+[Ll]ib/
+[Rr]elease*/
+[Tt]est[Rr]esults/
+_UpgradeReport_Files/
+_ReSharper.*/

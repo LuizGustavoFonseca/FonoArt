@@ -1,6 +1,8 @@
 ﻿var Fonoart = Fonoart || {};
 
 $(function () {
+    $('.navegacao').find('li').removeClass('active');
+    $('.navBarAtendimento').addClass('active');
 
     if ($('.listagem') && $('.listagem').length > 0) {
         $('#tabelaAtendimento').DataTable({
