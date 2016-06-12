@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using Fonoart.Web.Filtros;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Fonoart.Web
@@ -7,7 +8,7 @@ namespace Fonoart.Web
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            filters.Add(new FiltroErrosAjax());
         }
     }
 }

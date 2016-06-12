@@ -196,6 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AtendimentoController.cs" />
     <Compile Include="Controllers\CadastroFonoaudiologaController.cs" />
+    <Compile Include="Filtros\FiltroErrosAjax.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -278,6 +279,10 @@
     <ProjectReference Include="..\..\Fonoart.SDK\Fonoart.SDK.csproj">
       <Project>{2ff68707-d92c-47e9-9c0e-379eb6552b3b}</Project>
       <Name>Fonoart.SDK</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fonoart.Util\Fonoart.Util.csproj">
+      <Project>{0B37C90F-C270-42E1-B711-5A69ED8A6236}</Project>
+      <Name>Fonoart.Util</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

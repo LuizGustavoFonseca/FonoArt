@@ -19,6 +19,7 @@ $(function () {
         Fonoart.Fonoaudiologas.preencherGrid();
     }
     else {
+        $('#formCadastroFono').validationEngine();
         $("#cpfFono").mask("999.999.999-99");
         Fonoart.Principal.adicionarMascaraDeTelefone($('#telefoneFono'));
 
@@ -29,7 +30,9 @@ $(function () {
             locale: Fonoart.Principal.locale(true)
         });
         $('#salvarFonoaudiologa').on('click', function () {
-            Fonoart.Principal.exibirModalDeConfirmacao("Salvar Evento", "Deseja salvar alterações da fonoaudióloga?", false, function () { Fonoart.Fonoaudiologas.salvarFono() });
+            if ($('#formCadastroFono').validationEngine('validate')) {
+                Fonoart.Principal.exibirModalDeConfirmacao("Salvar Evento", "Deseja salvar alterações da fonoaudióloga?", false, function () { Fonoart.Fonoaudiologas.salvarFono() });
+            }            
         });
 
         $('#cancelarAlteracoes').on('click', function () {

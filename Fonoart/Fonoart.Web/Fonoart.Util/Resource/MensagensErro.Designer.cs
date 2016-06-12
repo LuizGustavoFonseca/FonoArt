@@ -97,6 +97,15 @@ namespace Fonoart.Util.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ocorreu um erro inesperado. .
+        /// </summary>
+        public static string ERRO_INESPERADO {
+            get {
+                return ResourceManager.GetString("ERRO_INESPERADO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Preenchimento de Nome é obrigatório..
         /// </summary>
         public static string ERRO_NOME_OBRIGATORIO {

@@ -129,6 +129,9 @@
   <data name="ERRO_CRFA_OBRIGATORIO" xml:space="preserve">
     <value>Preenchimento de Crfa é obrigatório.</value>
   </data>
+  <data name="ERRO_INESPERADO" xml:space="preserve">
+    <value>Ocorreu um erro inesperado. </value>
+  </data>
   <data name="ERRO_NOME_OBRIGATORIO" xml:space="preserve">
     <value>Preenchimento de Nome é obrigatório.</value>
   </data>
