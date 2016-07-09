@@ -44,27 +44,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dtos\AtendimentoAmbulatorialDTO.cs" />
+    <Compile Include="Dtos\AtendimentoDTO.cs" />
+    <Compile Include="Dtos\AtendimentoInternacaoDTO.cs" />
+    <Compile Include="Dtos\ConvenioDTO.cs" />
     <Compile Include="Dtos\FonoaudiologaDTO.cs" />
+    <Compile Include="Dtos\PacienteDTO.cs" />
+    <Compile Include="Dtos\SituacaoDTO.cs" />
+    <Compile Include="Executores\FiltrarAtendimentoRequisicao.cs" />
+    <Compile Include="Executores\FiltrarAtendimentoResultado.cs" />
+    <Compile Include="Executores\ListarConveniosResultado.cs" />
     <Compile Include="Executores\ListarFonoaudiologasResultado.cs" />
+    <Compile Include="Executores\ListarSituacoesResultado.cs" />
     <Compile Include="Executores\ObterFonoaudiologaRequisicao.cs" />
     <Compile Include="Executores\ObterFonoaudiologaResultado.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Executores\SalvarAtendimentoInternacaoRequisicao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Executores\SalvarFonoaudiologaRequisicao.cs" />
+    <Compile Include="Repositorios\IAtendimentoAmbulatorialRepositorio.cs" />
+    <Compile Include="Repositorios\IAtendimentoInternacaoRepositorio.cs" />
+    <Compile Include="Repositorios\IConvenioRepositorio.cs" />
     <Compile Include="Repositorios\IFonoaudiologaRepositorio.cs" />
+    <Compile Include="Repositorios\ISituacaoRepositorio.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="obj\Debug\TempPE\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="bin\Debug\Fronteiras.dll" />
-    <Content Include="bin\Debug\Fronteiras.pdb" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Fonoart.Entidades\Fonoart.Entidades.csproj">
       <Project>{d73ceeaf-61e7-43f3-a1ee-f4ae66cea4af}</Project>

@@ -1,14 +1,12 @@
 ﻿
-<div class="container listagem" data-url-listar="@Url.Action("ListarFonos", "CadastroFonoaudiologa")" data-url-cadastro="@Url.Action("Cadastro", "CadastroFonoaudiologa")">
-    <h1 class="page-header">Fonoaudiólogas</h1>        
-    <div class="row">
-        <div class="col-md-3 pull-right">
-            <p class="pull-right">
-                <button type="button" class="btn btn-primary"><i class="fa fa-filter"></i> Filtrar</button>
-                <a type="button" href="@Url.Action("Cadastro", "CadastroFonoaudiologa")" class="btn btn-default">Nova Fonoaudiologa</a>
-            </p>
+<div class="container listagem" data-url-listar="@Url.Action("ListarFonos", "CadastroFonoaudiologa")" data-url-cadastro="@Url.Action("Cadastro", "CadastroFonoaudiologa")">    
+    <div class="page-header">
+        <h3 class="pull-left titulo">Listagem Fonoaudiólogas</h3>
+        <div class="pull-right">
+            <a type="button" href="@Url.Action("Cadastro", "CadastroFonoaudiologa")" class="btn btn-default">Nova Fonoaudiologa</a>
         </div>
-    </div>
+        <div class="clearfix"></div>
+    </div>    
     <table id="tabelaFonos" class="table table-hover table-striped">
         <thead>
             <tr>

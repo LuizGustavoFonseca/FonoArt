@@ -1,11 +1,10 @@
-﻿using System;
-using AL.NucleoPoliticasComerciais.Repositorios;
-using Fronteiras.Repositorios;
-using Repositorios.Entidades;
-using MongoDB.Driver;
-using System.Collections.Generic;
-using System.Collections;
+﻿using AL.NucleoPoliticasComerciais.Repositorios;
 using Entidades;
+using Fronteiras.Repositorios;
+using MongoDB.Driver;
+using Repositorios.Entidades;
+using System;
+using System.Collections.Generic;
 
 namespace Repositorios
 {

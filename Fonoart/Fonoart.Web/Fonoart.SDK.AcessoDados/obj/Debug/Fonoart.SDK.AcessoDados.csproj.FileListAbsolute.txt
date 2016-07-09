@@ -2,3 +2,8 @@ C:\Luiz\_Source\Fonoart\Fonoart.Web\Fonoart.SDK.AcessoDados\bin\Debug\Fonoart.SD
 C:\Luiz\_Source\Fonoart\Fonoart.Web\Fonoart.SDK.AcessoDados\bin\Debug\Fonoart.SDK.AcessoDados.pdb
 C:\Luiz\_Source\Fonoart\Fonoart.Web\Fonoart.SDK.AcessoDados\obj\Debug\Fonoart.SDK.AcessoDados.dll
 C:\Luiz\_Source\Fonoart\Fonoart.Web\Fonoart.SDK.AcessoDados\obj\Debug\Fonoart.SDK.AcessoDados.pdb
+C:\_Source\FonoArt\Fonoart\Fonoart.Web\Fonoart.SDK.AcessoDados\bin\Debug\Fonoart.SDK.AcessoDados.dll
+C:\_Source\FonoArt\Fonoart\Fonoart.Web\Fonoart.SDK.AcessoDados\bin\Debug\Fonoart.SDK.AcessoDados.pdb
+C:\_Source\FonoArt\Fonoart\Fonoart.Web\Fonoart.SDK.AcessoDados\obj\Debug\Fonoart.SDK.AcessoDados.csprojResolveAssemblyReference.cache
+C:\_Source\FonoArt\Fonoart\Fonoart.Web\Fonoart.SDK.AcessoDados\obj\Debug\Fonoart.SDK.AcessoDados.dll
+C:\_Source\FonoArt\Fonoart\Fonoart.Web\Fonoart.SDK.AcessoDados\obj\Debug\Fonoart.SDK.AcessoDados.pdb

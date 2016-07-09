@@ -43,13 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Atendimento.cs" />
+    <Compile Include="AtendimentoAmbulatorial.cs" />
+    <Compile Include="AtendimentoInternacao.cs" />
     <Compile Include="ChaveEntidadeData.cs" />
     <Compile Include="ChaveEntidadeGuid.cs" />
     <Compile Include="ChaveEntidadeNumerica.cs" />
     <Compile Include="ChaveEntidadeString.cs" />
+    <Compile Include="Convenio.cs" />
     <Compile Include="Fonoaudiologa.cs" />
     <Compile Include="IChaveEntidade.cs" />
     <Compile Include="IEntidade.cs" />
+    <Compile Include="Paciente.cs" />
+    <Compile Include="Situacao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

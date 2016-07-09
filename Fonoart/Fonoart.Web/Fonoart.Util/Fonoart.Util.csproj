@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enum\TipoAtendimento.cs" />
+    <Compile Include="Enum\TipoSituacao.cs" />
     <Compile Include="ExtensionDeObject.cs" />
     <Compile Include="ExtensionFloat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

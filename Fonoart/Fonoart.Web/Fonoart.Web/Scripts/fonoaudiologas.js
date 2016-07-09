@@ -1,6 +1,8 @@
 ﻿var Fonoart = Fonoart || { Fonoaudiologas: {} };
 
 $(function () {
+    $('.navegacao').find('li').removeClass('active');
+    $('.navBarFono').addClass('active');
 
     if ($('.listagem') && $('.listagem').length > 0) {
         $('#tabelaFonos').DataTable({
