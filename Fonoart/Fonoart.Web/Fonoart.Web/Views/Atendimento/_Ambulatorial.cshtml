@@ -1,4 +1,6 @@
-﻿<div class="col-md-12 partialAmbulatorial" hidden="hidden">
+﻿@model Fonoart.Web.Models.AtendimentoCadastroModel
+
+<div class="col-md-12 partialAmbulatorial" hidden="hidden">
     <div class="panel panel-info">
         <div class="panel-heading">
             <h3 class="panel-title">Atendimento Ambulatorial</h3>
@@ -16,19 +18,31 @@
                 <div class="col-md-5">
                     <div class="form-group">
                         <label>Fonoaudióloga*</label>
-                        <input type="text" class="form-control" id="fonoaudiologa" />
+                        <select class="form-control">
+                            <option value="">Todas</option>
+                            @foreach (var fono in Model.Fonoaudiologas)
+                            {
+                                <option value="@fono.Cpf">@fono.Nome</option>
+                            }
+                        </select> 
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label>Procedimento</label>
-                        <input type="text" class="form-control" id="procedimento" />
+                        <select class="form-control">
+                            <option value="">Todas</option>
+                            @foreach (var situacao in Model.Situacoes.Where(sit => sit.Tipo == Fonoart.Util.Enum.TipoSituacao.Procedimento))
+                            {
+                                <option value="@situacao.Identificador">@situacao.Descricao</option>
+                            }
+                        </select>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
                         <label>Data Solicitação</label>
-                        <input type="text" class="form-control" id="dataSolicitacao" />
+                        <input type="text" class="form-control" id="dataSolicitacaoAmb" />
                     </div>
                 </div>
             </div>

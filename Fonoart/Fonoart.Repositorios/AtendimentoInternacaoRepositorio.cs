@@ -23,33 +23,33 @@ namespace Repositorios
             return Listar(filtro);
         }
 
-        public void Criar(string codigoAtendimento, string codigoAtendimentoPai, string codigoPaciente, string cpfFonoaudiologa, DateTime dataCriacao, DateTime dataSolicitacao, int idSituacao, string observacao, string usuarioCriacao, bool vincularAtendimento, TipoAtendimento tipoAtendimento)
+        public void Criar(string codigoAtendimento, string quarto, string codigoPaciente, string cpfFonoaudiologa, DateTime dataCriacao, DateTime dataSolicitacao,
+            int idSituacao, DateTime dataInternacao, string usuarioCriacao, TipoAtendimento tipoAtendimento)
         {
             var entidade = new RAtendimentoInternacao()
             {
                 CodigoAtendimento = codigoAtendimento,
-                CodigoAtendimentoPai = codigoAtendimentoPai,
+                Quarto = quarto,
                 CodigoPaciente = codigoPaciente,
                 CpfFonoaudiologa = cpfFonoaudiologa,
                 DataAlteracao = dataCriacao,
                 DataSolicitacao = dataSolicitacao,
-                IdSituacao = idSituacao,
-                Observacao = observacao,
+                IdSituacao = idSituacao,                
                 TipoAtendimento = tipoAtendimento,
                 UsuarioAlteracao = usuarioCriacao,
-                VincularAtendimento = vincularAtendimento
+                DataInternacao = dataInternacao
             };
             Inserir(entidade);
         }
 
-        public void Atualizar(string codigoAtendimento, string codigoAtendimentoPai, string codigoPaciente, string cpfFonoaudiologa, DateTime dataAtualizacao, DateTime dataSolicitacao, int idSituacao, 
-            string observacao, string usuarioAlteracao, bool vincularAtendimento, TipoAtendimento tipoAtendimento)
+        public void Atualizar(string codigoAtendimento, string quarto, string codigoPaciente, string cpfFonoaudiologa, DateTime dataAtualizacao, DateTime dataSolicitacao,
+            int idSituacao, DateTime dataInternacao, string usuarioAlteracao, TipoAtendimento tipoAtendimento)
         {
             var filtro = Builders<RAtendimentoInternacao>.Filter.Eq("CodigoAtendimento", codigoAtendimento);
-            var update = Builders<RAtendimentoInternacao>.Update.Set("CodigoAtendimentoPai", codigoAtendimentoPai).
+            var update = Builders<RAtendimentoInternacao>.Update.Set("Quarto", quarto).
                 Set("CodigoPaciente", codigoPaciente).Set("CpfFonoaudiologa", cpfFonoaudiologa).Set("DataAlteracao", dataAtualizacao).
-                Set("DataSolicitacao", dataSolicitacao).Set("IdSituacao", idSituacao).Set("VincularAtendimento", vincularAtendimento).
-                Set("Observacao", observacao).Set("TipoAtendimento", tipoAtendimento).Set("UsuarioAlteracao", usuarioAlteracao);
+                Set("DataSolicitacao", dataSolicitacao).Set("IdSituacao", idSituacao).
+                Set("DataInternacao", dataInternacao).Set("TipoAtendimento", tipoAtendimento).Set("UsuarioAlteracao", usuarioAlteracao);
 
             Atualizar(filtro, update);
         }

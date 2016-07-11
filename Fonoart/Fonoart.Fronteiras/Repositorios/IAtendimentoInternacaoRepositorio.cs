@@ -11,10 +11,10 @@ namespace Fronteiras.Repositorios
             DateTime? dataFimSolicitacao, DateTime? dataInicioAltaAdministrativa, DateTime? dataFimAltaAdministrativa);
         AtendimentoInternacao Obter(string codigoAtendimento);
                 
-        void Criar(string codigoAtendimento, string codigoAtendimentoPai, string codigoPaciente, string cpfFonoaudiologa, DateTime dataCriacao, DateTime dataSolicitacao, 
-            int idSituacao, string observacao, string usuarioCriacao, bool vincularAtendimento, TipoAtendimento tipoAtendimento);
+        void Criar(string codigoAtendimento, string quarto, string codigoPaciente, string cpfFonoaudiologa, DateTime dataCriacao, DateTime dataSolicitacao, 
+            int idSituacao, DateTime dataInternacao, string usuarioCriacao, TipoAtendimento tipoAtendimento);
 
-        void Atualizar(string codigoAtendimento, string codigoAtendimentoPai, string codigoPaciente, string cpfFonoaudiologa, DateTime dataAtualizacao, DateTime dataSolicitacao, 
-            int idSituacao, string observacao, string usuarioAlteracao, bool vincularAtendimento, TipoAtendimento tipoAtendimento);
+        void Atualizar(string codigoAtendimento, string quarto, string codigoPaciente, string cpfFonoaudiologa, DateTime dataAtualizacao, DateTime dataSolicitacao, 
+            int idSituacao, DateTime dataInternacao, string usuarioAlteracao, TipoAtendimento tipoAtendimento);
     }
 }

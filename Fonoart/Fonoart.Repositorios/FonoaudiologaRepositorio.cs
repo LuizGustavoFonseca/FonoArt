@@ -27,7 +27,7 @@ namespace Repositorios
         public void Criar(string cpf, string crfa, DateTime dataNascimento, string endereco, string nome, string telefone)
         {
             var entidade = new RFonoaudiologa() { Cpf = cpf, Crfa = crfa, DataNascimento = dataNascimento, Endereco = endereco, Nome = nome, Telefone = telefone };
-            Inserir(entidade);            
+            Inserir(entidade);
         }
 
         public IEnumerable<Fonoaudiologa> Listar()

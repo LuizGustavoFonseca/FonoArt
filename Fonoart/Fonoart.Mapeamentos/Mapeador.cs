@@ -21,6 +21,7 @@ namespace AL.NucleoPoliticasComerciais.Mapeamentos
             listaMapeamentos.Add(new Mapeamento(typeof(IExecutor<ObterFonoaudiologaRequisicao, ObterFonoaudiologaResultado>), typeof(ObterFonoaudiologaExecutor)));
             listaMapeamentos.Add(new Mapeamento(typeof(IExecutorSemRequisicao<ListarSituacoesResultado>), typeof(ListarSituacoesExecutor)));
             listaMapeamentos.Add(new Mapeamento(typeof(IExecutorSemRequisicao<ListarConveniosResultado>), typeof(ListarConveniosExecutor)));
+            listaMapeamentos.Add(new Mapeamento(typeof(IExecutor<ObterPacienteRequisicao, ObterPacienteResultado>), typeof(ObterPacienteExecutor)));
             #endregion
 
             #region Mapeamento de Repositorios
@@ -28,7 +29,7 @@ namespace AL.NucleoPoliticasComerciais.Mapeamentos
             listaMapeamentos.Add(new Mapeamento(typeof(IFonoaudiologaRepositorio), typeof(FonoaudiologaRepositorio)));
             listaMapeamentos.Add(new Mapeamento(typeof(ISituacaoRepositorio), typeof(SituacaoRepositorio)));
             listaMapeamentos.Add(new Mapeamento(typeof(IConvenioRepositorio), typeof(ConvenioRepositorio)));
-
+            listaMapeamentos.Add(new Mapeamento(typeof(IPacienteRepositorio), typeof(PacienteRepositorio)));
             #endregion
 
             return listaMapeamentos.ToArray();

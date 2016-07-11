@@ -200,6 +200,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AtendimentoCadastroModel.cs" />
     <Compile Include="Models\AtendimentoModel.cs" />
     <Compile Include="Models\CadastroFonoaudiologaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

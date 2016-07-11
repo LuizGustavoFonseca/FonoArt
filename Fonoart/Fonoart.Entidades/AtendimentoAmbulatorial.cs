@@ -1,12 +1,11 @@
-﻿using System;
-
-namespace Entidades
+﻿namespace Entidades
 {
     public abstract class AtendimentoAmbulatorial : Atendimento
     {
         #region Campos
-        public virtual string Quarto { get; set; }
-        public virtual DateTime DataInternacao { get; set; }
+        public virtual bool VincularAtendimento { get; set; }
+        public virtual string CodigoAtendimentoPai { get; set; }
+        public virtual string Observacao { get; set; }        
         #endregion
     }
 }

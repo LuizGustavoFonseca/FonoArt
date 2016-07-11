@@ -1,18 +1,25 @@
-﻿@model string
+﻿@model Fonoart.Web.Models.AtendimentoCadastroModel
 
 <div class="container cadastro">
-    <h1 class="page-header">Novo Atendimento</h1>    
-    @Html.Partial("_Cliente")        
+    <div class="page-header">
+        <h3 class="pull-left titulo">@(string.IsNullOrWhiteSpace(Model.CodigoAtendimento) ? "Novo Atendimento" : string.Format("Atendimento {0}", Model.CodigoAtendimento))</h3>
+        <div class="pull-right">
+            <button type="button" class="btn btn-primary" id="salvarAtendimento" data-url-salvar-internacao="@Url.Action("SalvarAtendimentoInternacao", "Atendimento")">Salvar</button>
+            <button type="button" class="btn btn-danger" id="cancelarAlteracoes">Cancelar</button>
+        </div>
+        <div class="clearfix"></div>
+    </div>   
+    @Html.Partial("_Cliente", Model)        
     <div class="col-md-12 text-center" style="padding-bottom: 10px;">
         <label class="radio-inline">
-            <input type="radio" class="icheck" id="checkInternacao" name="tipoAtendimento"> Internação
+            <input type="radio" class="icheck" id="checkInternacao" data-valor="@((int)Fonoart.Util.Enum.TipoAtendimento.Internacao)" name="tipoAtendimento"> Internação
         </label>
         <label class="radio-inline">
-            <input type="radio" class="icheck" id="checkAmbulatorial" name="tipoAtendimento"> Ambulatorial
+            <input type="radio" class="icheck" id="checkAmbulatorial" data-valor="@((int)Fonoart.Util.Enum.TipoAtendimento.Ambulatorial)" name="tipoAtendimento"> Ambulatorial
         </label>
     </div>
-    @Html.Partial("_Ambulatorial") 
-    @Html.Partial("_Internacao") 
+    @Html.Partial("_Ambulatorial", Model) 
+    @Html.Partial("_Internacao", Model) 
 </div>
 
 

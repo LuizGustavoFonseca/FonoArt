@@ -46,7 +46,7 @@ namespace AL.NucleoPoliticasComerciais.Repositorios
         {
             IMongoDatabase dataBase = ObterBaseDeDados();
             var collection = dataBase.GetCollection<TEntidade>(nomeTabela);
-            return collection.Find<TEntidade>(filtro).First();
+            return collection.Find<TEntidade>(filtro).FirstOrDefault();
         }
 
         private IMongoDatabase ObterBaseDeDados()

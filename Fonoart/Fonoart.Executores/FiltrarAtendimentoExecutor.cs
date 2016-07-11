@@ -32,28 +32,15 @@ namespace Executores
                 AtendimentosAmbulatoriais = atendimentosAmbulatoriais.Select(atAmbu => new AtendimentoAmbulatorialDTO()
                 {
                     CodigoAtendimento = atAmbu.CodigoAtendimento,
-                    DataAlteracao = atAmbu.DataAlteracao,
-                    DataInternacao = atAmbu.DataInternacao,
+                    DataAlteracao = atAmbu.DataAlteracao,                    
                     DataSolicitacao = atAmbu.DataSolicitacao,
-                    Fonoaudiologa = new FonoaudiologaDTO()
-                    {
-                        Cpf = atAmbu.Fonoaudiologa.Cpf,
-                        Crfa = atAmbu.Fonoaudiologa.Crfa,
-                        DataNascimento = atAmbu.Fonoaudiologa.DataNascimento,
-                        Endereco = atAmbu.Fonoaudiologa.Endereco,
-                        Nome = atAmbu.Fonoaudiologa.Nome,
-                        NovaFonoaudiologa = false,
-                        Telefone = atAmbu.Fonoaudiologa.Telefone
-                    },
-                    Paciente = new PacienteDTO()
-                    {
-
-                    },
-                    Quarto = atAmbu.Quarto,
-                    Situacao = new SituacaoDTO()
-                    {
-
-                    },
+                    CodigoAtendimentoPai = atAmbu.CodigoAtendimentoPai,
+                    CodigoPaciente = atAmbu.CodigoPaciente,
+                    CpfFonoaudiologa = atAmbu.CpfFonoaudiologa,
+                    IdSituacao = atAmbu.IdSituacao,
+                    Observacao = atAmbu.Observacao,
+                    TipoAtendimento = atAmbu.TipoAtendimento,
+                    VincularAtendimento = atAmbu.VincularAtendimento,                   
                     UsuarioAlteracao = atAmbu.UsuarioAlteracao
                 }),
                 AtendimentosInternacao = atendimentosInternacao.Select(atInter => new AtendimentoInternacaoDTO()
@@ -61,24 +48,12 @@ namespace Executores
                     CodigoAtendimento = atInter.CodigoAtendimento,
                     DataAlteracao = atInter.DataAlteracao,
                     DataSolicitacao = atInter.DataSolicitacao,
-                    Fonoaudiologa = new FonoaudiologaDTO()
-                    {
-                        Cpf = atInter.Fonoaudiologa.Cpf,
-                        Crfa = atInter.Fonoaudiologa.Crfa,
-                        DataNascimento = atInter.Fonoaudiologa.DataNascimento,
-                        Endereco = atInter.Fonoaudiologa.Endereco,
-                        Nome = atInter.Fonoaudiologa.Nome,
-                        NovaFonoaudiologa = false,
-                        Telefone = atInter.Fonoaudiologa.Telefone
-                    },
-                    Paciente = new PacienteDTO()
-                    {
-
-                    },
-                    Situacao = new SituacaoDTO()
-                    {
-
-                    },
+                    DataInternacao = atInter.DataInternacao,
+                    Quarto = atInter.Quarto,
+                    CodigoPaciente = atInter.CodigoPaciente,
+                    CpfFonoaudiologa = atInter.CpfFonoaudiologa,
+                    IdSituacao = atInter.IdSituacao,
+                    TipoAtendimento = atInter.TipoAtendimento,                    
                     UsuarioAlteracao = atInter.UsuarioAlteracao
                 })
             };

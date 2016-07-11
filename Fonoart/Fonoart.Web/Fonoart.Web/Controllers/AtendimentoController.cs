@@ -1,6 +1,8 @@
-﻿using Fonoart.SDK.Fronteira;
+﻿using AL.NucleoPoliticasComerciais.WebUI.Util.Atributo;
+using Fonoart.SDK.Fronteira;
 using Fonoart.SDK.InversaoControle;
 using Fonoart.Web.Models;
+using Fronteiras.Dtos;
 using Fronteiras.Executores;
 using System;
 using System.Collections.Generic;
@@ -27,7 +29,37 @@ namespace Fonoart.Web.Controllers
 
         public ActionResult CadastroAtendimento(string codigoAtendimento)
         {
-            return View("Cadastro", codigoAtendimento);
+            AtendimentoCadastroModel model = new AtendimentoCadastroModel();
+            var resultadoFono = ResolvedorDeDependencias.Instance().ObterInstanciaDe<IExecutorSemRequisicao<ListarFonoaudiologasResultado>>().Executar();
+            var resultadoConvenios = ResolvedorDeDependencias.Instance().ObterInstanciaDe<IExecutorSemRequisicao<ListarConveniosResultado>>().Executar();
+            var resultadoSituacao = ResolvedorDeDependencias.Instance().ObterInstanciaDe<IExecutorSemRequisicao<ListarSituacoesResultado>>().Executar();
+            model.Fonoaudiologas = resultadoFono.Fonoaudiologas;
+            model.Convenios = resultadoConvenios.Convenios;
+            model.Situacoes = resultadoSituacao.Situacoes;
+            model.CodigoAtendimento = codigoAtendimento;
+
+            return View("Cadastro", model);
+        }
+
+        public JsonResult SalvarAtendimentoInternacao([JsonBinder]AtendimentoInternacaoDTO atendimento)
+        {
+            ResolvedorDeDependencias.Instance().ObterInstanciaDe<IExecutorSemResultado<SalvarAtendimentoInternacaoRequisicao>>().
+                Executar(new SalvarAtendimentoInternacaoRequisicao() {
+                    AtendimentoInternacao = atendimento
+                });
+
+            return Json(new { });
+        }
+
+        public JsonResult ObterPaciente(string codigoPaciente)
+        {
+            var resultado = ResolvedorDeDependencias.Instance().ObterInstanciaDe<IExecutor<ObterPacienteRequisicao, ObterPacienteResultado>>().
+                Executar(new ObterPacienteRequisicao()
+                {
+                    CodigoPaciente = codigoPaciente
+                });
+
+            return Json(new { Paciente = resultado.Paciente });
         }
     }
 }

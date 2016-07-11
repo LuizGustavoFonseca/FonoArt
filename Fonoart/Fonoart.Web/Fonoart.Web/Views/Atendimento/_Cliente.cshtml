@@ -1,4 +1,6 @@
-﻿<div class="col-md-12">
+﻿@model Fonoart.Web.Models.AtendimentoCadastroModel
+
+<div class="col-md-12">
     <div class="panel panel-info">
         <div class="panel-heading">
             <h3 class="panel-title">Dados do Paciente</h3>
@@ -8,7 +10,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label>Código do Paciente*</label>
-                        <input type="text" class="form-control" id="codigoPaciente" />
+                        <input type="text" class="form-control" id="codigoPaciente" data-url-obter-cliente="@Url.Action("ObterPaciente", "Atendimento")" />
                     </div>
                 </div>
             </div>
@@ -16,13 +18,13 @@
                 <div class="col-md-8">
                     <div class="form-group">
                         <label>Nome do Paciente*</label>
-                        <input type="text" class="form-control" id="nomePaciente" />
+                        <input type="text" disabled="disabled" class="form-control" id="nomePaciente" />
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label>Telefone</label>
-                        <input type="text" class="form-control" id="telefone" />
+                        <input type="text" disabled="disabled" class="form-control" id="telefone" />
                     </div>
                 </div>
             </div>
@@ -30,13 +32,19 @@
                 <div class="col-md-8">
                     <div class="form-group">
                         <label>Convênio*</label>
-                        <input type="text" class="form-control" id="convenio" />
+                        <select class="form-control" id="convenios" disabled="disabled">
+                            <option value=""></option>
+                            @foreach (var convenio in Model.Convenios)
+                            {
+                                <option value="@convenio.CodigoConvenio">@convenio.NomeConvenio</option>
+                            }
+                        </select>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label>Número da Carteirinha</label>
-                        <input type="text" class="form-control" id="numeroCarteirinha" />
+                        <input type="text" class="form-control" disabled="disabled" id="numeroCarteirinha" />
                     </div>
                 </div>
             </div>

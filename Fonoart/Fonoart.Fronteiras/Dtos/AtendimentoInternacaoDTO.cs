@@ -1,9 +1,10 @@
-﻿namespace Fronteiras.Dtos
+﻿using System;
+
+namespace Fronteiras.Dtos
 {
     public class AtendimentoInternacaoDTO : AtendimentoDTO
     {
-        public bool VincularAtendimento { get; set; }
-        public string CodigoAtendimentoPai { get; set; }
-        public string Observacao { get; set; }
+        public string Quarto { get; set; }
+        public DateTime DataInternacao { get; set; }
     }
 }

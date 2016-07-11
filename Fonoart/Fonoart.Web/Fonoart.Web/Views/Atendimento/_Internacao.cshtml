@@ -1,4 +1,5 @@
-﻿
+﻿@model Fonoart.Web.Models.AtendimentoCadastroModel
+
 <div class="col-md-12 partialInternacao" hidden="hidden">
     <div class="panel panel-info">
         <div class="panel-heading">
@@ -9,7 +10,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label>Código do Atendimento*</label>
-                        <input type="text" class="form-control" id="codigoAtendimento" />
+                        <input type="text" class="form-control" id="codigoAtendimentoInt" />
                     </div>
                 </div>
             </div>
@@ -17,19 +18,31 @@
                 <div class="col-md-5">
                     <div class="form-group">
                         <label>Fonoaudióloga*</label>
-                        <input type="text" class="form-control" id="fonoaudiologa" />
+                        <select class="form-control" id="fonoInt">
+                            <option value="">Todas</option>
+                            @foreach (var fono in Model.Fonoaudiologas)
+                            {
+                                <option value="@fono.Cpf">@fono.Nome</option>
+                            }
+                        </select>                        
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label>Situação*</label>
-                        <input type="text" class="form-control" id="procedimento" />
+                        <select class="form-control" id="situacaoInt">
+                            <option value="">Todas</option>
+                            @foreach (var situacao in Model.Situacoes.Where(sit => sit.Tipo == Fonoart.Util.Enum.TipoSituacao.SituacaoInternacao))
+                            {
+                                <option value="@situacao.Identificador">@situacao.Descricao</option>
+                            }
+                        </select>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
                         <label>Data Solicitação*</label>
-                        <input type="text" class="form-control" id="dataSolicitacao" />
+                        <input type="text" class="form-control" id="dataSolicitacaoInt" />
                     </div>
                 </div>
             </div>
