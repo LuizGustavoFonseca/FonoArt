@@ -61,5 +61,24 @@ namespace Fonoart.Web.Controllers
 
             return Json(new { Paciente = resultado.Paciente });
         }
+
+        public JsonResult FiltrarAtendimento(string codigoPaciente, string codigoConvenio, string cpfFonoaudiologa, int? idSituacao, 
+            DateTime? dataInicioSolicitacao, DateTime? dataFimSolicitacao, DateTime? dataInicioAltaAdministrativa, DateTime? dataFimAltaAdministrativa)
+        {
+            var resultado = ResolvedorDeDependencias.Instance().ObterInstanciaDe<IExecutor<FiltrarAtendimentoRequisicao, FiltrarAtendimentoResultado>>().
+                Executar(new FiltrarAtendimentoRequisicao()
+                {
+                    CodigoConvenio = codigoConvenio,
+                    CodigoPaciente = codigoPaciente,
+                    CpfFono = cpfFonoaudiologa,
+                    DataFimAltaAdministrativa = dataFimAltaAdministrativa,
+                    DataFimSolicitacao = dataFimSolicitacao,
+                    DataInicioAltaAdministrativa = dataInicioAltaAdministrativa,
+                    DataInicioSolicitacao = dataInicioSolicitacao,
+                    IdSituacao = idSituacao
+                });
+
+            return Json(new { AtendimentosAmbulatoriais = resultado.AtendimentosAmbulatoriais, AtendimentosInternacao = resultado.AtendimentosInternacao });
+        }
     }
 }

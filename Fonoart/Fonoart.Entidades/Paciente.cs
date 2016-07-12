@@ -1,11 +1,12 @@
 ﻿using AL.NucleoPoliticasComerciais.Entidades;
+using MongoDB.Bson;
 
 namespace Entidades
 {
     public abstract class Paciente : IEntidade
     {
         #region Campos
-
+        public virtual ObjectId _id { get; set; }
         public virtual string CodigoPaciente { get; set; }
         public virtual string NomePaciente { get; set; }
         public virtual string TelefonePaciente { get; set; }

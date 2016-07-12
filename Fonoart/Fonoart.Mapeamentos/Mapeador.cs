@@ -22,6 +22,8 @@ namespace AL.NucleoPoliticasComerciais.Mapeamentos
             listaMapeamentos.Add(new Mapeamento(typeof(IExecutorSemRequisicao<ListarSituacoesResultado>), typeof(ListarSituacoesExecutor)));
             listaMapeamentos.Add(new Mapeamento(typeof(IExecutorSemRequisicao<ListarConveniosResultado>), typeof(ListarConveniosExecutor)));
             listaMapeamentos.Add(new Mapeamento(typeof(IExecutor<ObterPacienteRequisicao, ObterPacienteResultado>), typeof(ObterPacienteExecutor)));
+            listaMapeamentos.Add(new Mapeamento(typeof(IExecutorSemResultado<SalvarAtendimentoInternacaoRequisicao>), typeof(SalvarAtendimentoInternacaoExecutor)));
+            listaMapeamentos.Add(new Mapeamento(typeof(IExecutor<FiltrarAtendimentoRequisicao, FiltrarAtendimentoResultado>), typeof(FiltrarAtendimentoExecutor)));
             #endregion
 
             #region Mapeamento de Repositorios
@@ -30,6 +32,7 @@ namespace AL.NucleoPoliticasComerciais.Mapeamentos
             listaMapeamentos.Add(new Mapeamento(typeof(ISituacaoRepositorio), typeof(SituacaoRepositorio)));
             listaMapeamentos.Add(new Mapeamento(typeof(IConvenioRepositorio), typeof(ConvenioRepositorio)));
             listaMapeamentos.Add(new Mapeamento(typeof(IPacienteRepositorio), typeof(PacienteRepositorio)));
+            listaMapeamentos.Add(new Mapeamento(typeof(IAtendimentoInternacaoRepositorio), typeof(AtendimentoInternacaoRepositorio)));
             #endregion
 
             return listaMapeamentos.ToArray();
