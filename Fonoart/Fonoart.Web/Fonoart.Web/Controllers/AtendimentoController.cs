@@ -5,9 +5,6 @@ using Fonoart.Web.Models;
 using Fronteiras.Dtos;
 using Fronteiras.Executores;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Fonoart.Web.Controllers
@@ -41,6 +38,14 @@ namespace Fonoart.Web.Controllers
             return View("Cadastro", model);
         }
 
+        public JsonResult ObterAtendimento(string codigoAtendimento)
+        {
+            var resultado = ResolvedorDeDependencias.Instance().ObterInstanciaDe<IExecutor<ObterAtendimentoRequisicao, ObterAtendimentoResultado>>().
+                Executar(new ObterAtendimentoRequisicao() { CodigoAtendimento = codigoAtendimento });
+
+            return Json(new { atendimento = resultado.Atendimento });
+        }
+
         public JsonResult SalvarAtendimentoInternacao([JsonBinder]AtendimentoInternacaoDTO atendimento)
         {
             ResolvedorDeDependencias.Instance().ObterInstanciaDe<IExecutorSemResultado<SalvarAtendimentoInternacaoRequisicao>>().
@@ -48,7 +53,15 @@ namespace Fonoart.Web.Controllers
                     AtendimentoInternacao = atendimento
                 });
 
-            return Json(new { });
+            return Json(new { sucesso = true, mensagemSucesso = "Atendimento salvo com sucesso." });
+        }
+
+        public JsonResult SalvarAtendimentoAnbulatorio([JsonBinder]AtendimentoAmbulatorialDTO atendimento)
+        {
+            ResolvedorDeDependencias.Instance().ObterInstanciaDe<IExecutorSemResultado<SalvarAtendimentoAmbulatorialRequisicao>>().
+                Executar(new SalvarAtendimentoAmbulatorialRequisicao() { AtendimentoAmbulatorial = atendimento });
+
+            return Json(new { sucesso = true, mensagemSucesso = "Atendimento salvo com sucesso." });
         }
 
         public JsonResult ObterPaciente(string codigoPaciente)

@@ -56,10 +56,13 @@
     <Compile Include="Executores\ListarConveniosResultado.cs" />
     <Compile Include="Executores\ListarFonoaudiologasResultado.cs" />
     <Compile Include="Executores\ListarSituacoesResultado.cs" />
+    <Compile Include="Executores\ObterAtendimentoRequisicao.cs" />
+    <Compile Include="Executores\ObterAtendimentoResultado.cs" />
     <Compile Include="Executores\ObterPacienteRequisicao.cs" />
     <Compile Include="Executores\ObterPacienteResultado.cs" />
     <Compile Include="Executores\ObterFonoaudiologaRequisicao.cs" />
     <Compile Include="Executores\ObterFonoaudiologaResultado.cs" />
+    <Compile Include="Executores\SalvarAtendimentoAmbulatorialRequisicao.cs" />
     <Compile Include="Executores\SalvarAtendimentoInternacaoRequisicao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Executores\SalvarFonoaudiologaRequisicao.cs" />

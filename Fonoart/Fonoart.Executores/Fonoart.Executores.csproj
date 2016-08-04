@@ -45,9 +45,11 @@
     <Compile Include="ListarConveniosExecutor.cs" />
     <Compile Include="ListarFonoaudiologasExecutor.cs" />
     <Compile Include="ListarSituacoesExecutor.cs" />
+    <Compile Include="ObterAtendimentoExecutor.cs" />
     <Compile Include="ObterPacienteExecutor.cs" />
     <Compile Include="ObterFonoaudiologaExecutor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalvarAtendimentoAmbulatorialExecutor.cs" />
     <Compile Include="SalvarAtendimentoInternacaoExecutor.cs" />
     <Compile Include="SalvarFonoaudiologaExecutor.cs" />
   </ItemGroup>

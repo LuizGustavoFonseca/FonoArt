@@ -1,6 +1,6 @@
 ﻿@model Fonoart.Web.Models.AtendimentoCadastroModel
 
-<div class="container cadastro">
+<div class="container cadastro" data-url-obter-atendimento="@Url.Action("ObterAtendimento", "Atendimento")" data-codigo-atendimento="@Model.CodigoAtendimento">
     <div class="page-header">
         <h3 class="pull-left titulo">@(string.IsNullOrWhiteSpace(Model.CodigoAtendimento) ? "Novo Atendimento" : string.Format("Atendimento {0}", Model.CodigoAtendimento))</h3>
         <div class="pull-right">

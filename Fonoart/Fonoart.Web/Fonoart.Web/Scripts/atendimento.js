@@ -135,6 +135,16 @@ Fonoart.Atendimento = {
                 $('#nomePaciente').focus();
             }
         });
-
+    },
+    obterAtendimento: function () {
+        var action = $('.cadastro').data('url-obter-atendimento');
+        Fonoart.Principal.chamadaAjax(action, { codigoAtendimento: $('.cadastro').data('codigo-atendimento') }, function (dados) {
+            if (dados.atendimento.TipoAtendimento == $('#checkInternacao').data('valor')) {
+                
+            }
+            else {
+                
+            }
+        });
     }
 };
